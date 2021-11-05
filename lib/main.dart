@@ -63,40 +63,52 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               Tab(icon: Icon(Icons.camera_alt)),
               Tab(icon: Icon(Icons.grade)),
               Tab(icon: Icon(Icons.email)),
-            ]),
+            ],
+          ),
+          title: Text('Flutter Training'),
+          backgroundColor: Colors.amber[800],
         ),
-      persistentFooterButtons: <Widget>[
-        ElevatedButton(
-          onPressed: (){
-            print('add');
-          },
-          child: Icon(Icons.add)
+        body: TabBarView(
+          children: [
+            Icon(Icons.music_note),
+            Icon(Icons.music_video),
+            Icon(Icons.camera_alt),
+            Icon(Icons.grade),
+            Icon(Icons.email),
+          ],
         ),
-        TextButton(
-          onPressed: (){
-            print('clear');
-          },
-          child: Icon(Icons.clear))
-      ],
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-             label: 'Home',
+        persistentFooterButtons: <Widget>[
+          ElevatedButton(
+            onPressed: (){
+              print('add');
+            },
+            child: Icon(Icons.add)
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
+          TextButton(
+            onPressed: (){
+              print('clear');
+            },
+            child: Icon(Icons.clear))
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-      ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              label: 'Business',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              label: 'School',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[800],
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }
