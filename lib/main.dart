@@ -24,6 +24,7 @@ class MyStatefulWidget extends StatefulWidget {
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
+
   // This widget is the root of your application.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
@@ -52,64 +53,42 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 5, 
-      child: Scaffold(
-        appBar: AppBar(
-          bottom: TabBar(
-            tabs: [
-              Tab(icon: Icon(Icons.music_note)),
-              Tab(icon: Icon(Icons.music_video)),
-              Tab(icon: Icon(Icons.camera_alt)),
-              Tab(icon: Icon(Icons.grade)),
-              Tab(icon: Icon(Icons.email)),
-            ],
-          ),
-          title: Text('Flutter Training'),
-          backgroundColor: Colors.amber[800],
-        ),
-        body: TabBarView(
-          children: [
-            Icon(Icons.music_note),
-            Icon(Icons.music_video),
-            Icon(Icons.camera_alt),
-            Icon(Icons.grade),
-            Icon(Icons.email),
-          ],
-        ),
-        persistentFooterButtons: <Widget>[
-          ElevatedButton(
-            onPressed: (){
-              print('add');
-            },
-            child: Icon(Icons.add)
-          ),
-          TextButton(
-            onPressed: (){
-              print('clear');
-            },
-            child: Icon(Icons.clear))
-        ],
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'School',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Training Module'),
       ),
+        body: Container(
+        //child: Column(
+            child :Row(
+              children: [
+                Card(
+                  child: InkWell(
+                    splashColor: Colors.blue.withAlpha(30),
+                    onTap: () {
+                      print('Card tapped.');},
+                      child: const SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Text('A card that can be tapped'),
+                        ),
+                        ),
+                        ),
+                Card(
+                  child: InkWell(
+                    splashColor: Colors.blue.withAlpha(30),
+                    onTap: () {
+                      print('Card tapped.');},
+                      child: const SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Text('A card that can be tapped'),
+                      ),
+                  ),
+                ),
+              ],
+            ),
+        //),
+        ), 
     );
   }
 }
