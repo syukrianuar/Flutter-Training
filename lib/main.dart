@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screen/installation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyStatefulWidget extends StatefulWidget {
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
-  // This widget is the root of your application.
+// This widget is the root of your application.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   // static const TextStyle optionStyle =
@@ -55,40 +56,85 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Training Module'),
+        title: Text(
+          'Flutter Training Module',
+          textAlign: TextAlign.center,
+        ),
       ),
-        body: Container(
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 10),
         //child: Column(
-            child :Row(
-              children: [
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {
-                      print('Card tapped.');},
-                      child: const SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: Text('A card that can be tapped'),
-                        ),
-                        ),
-                        ),
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {
-                      print('Card tapped.');},
-                      child: const SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: Text('A card that can be tapped'),
-                      ),
-                  ),
+        child: GridView.count(
+          crossAxisCount: 2,
+          children: <Widget>[
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>installationCreate()));
+                  print('Card tapped.');
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/launch_image.png',
+                      width: 150,
+                      height: 150,
+                    ),
+                    Text('Installation'),
+                  ],
                 ),
-              ],
+              ),
             ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                onTap: () {
+                  print('Card tapped.');
+                },
+                child: Center(
+                  child: Text('Basic Widgets'),
+                ),
+              ),
+            ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                onTap: () {
+                  print('Card tapped.');
+                },
+                child: Center(
+                  child: Text('Form and Validation'),
+                ),
+              ),
+            ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                onTap: () {
+                  print('Card tapped.');
+                },
+                child: Center(
+                  child: Text('API'),
+                ),
+              ),
+            ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                onTap: () {
+                  print('Card tapped.');
+                },
+                child: Center(
+                  child: Text('Icon, Splash, APK'),
+                ),
+              ),
+            ),
+          ],
+        ),
         //),
-        ), 
+      ),
     );
   }
 }
