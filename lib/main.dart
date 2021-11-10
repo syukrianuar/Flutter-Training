@@ -174,56 +174,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Card(
-                        child: InkWell(
-                          splashColor: Colors.blue.withAlpha(30),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => installationCreate()));
-                            print('Card tapped.');
-                          },
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'assets/images/launch_image.png',
-                                width: 150,
-                                height: 150,
-                              ),
-                              Text('Form and Validation'),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Card(
-                        child: InkWell(
-                          splashColor: Colors.blue.withAlpha(30),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => installationCreate()));
-                            print('Card tapped.');
-                          },
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/launch_image.png',
-                                width: 150,
-                                height: 150,
-                              ),
-                              Text('API'),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                   Card(
                     child: InkWell(
                       splashColor: Colors.blue.withAlpha(30),
