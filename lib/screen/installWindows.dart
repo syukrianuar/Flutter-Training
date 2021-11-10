@@ -1,14 +1,16 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class installWindowsPage extends StatefulWidget {
-  const installWindowsPage({ Key? key }) : super(key: key);
+class InstallWindowsPage extends StatefulWidget {
+  const InstallWindowsPage({ Key? key }) : super(key: key);
 
   @override
-  _installWindowsPageState createState() => _installWindowsPageState();
+  _InstallWindowsPageState createState() => _InstallWindowsPageState();
 }
 
-class _installWindowsPageState extends State<installWindowsPage> {
+class _InstallWindowsPageState extends State<InstallWindowsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +21,7 @@ class _installWindowsPageState extends State<installWindowsPage> {
         backgroundColor: Colors.black,
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
        
       ),
     );

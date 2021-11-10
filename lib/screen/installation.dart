@@ -5,14 +5,14 @@ import 'package:my_first_flutter/screen/installMacOS.dart';
 import 'package:my_first_flutter/screen/installWindows.dart';
 import 'package:my_first_flutter/screen/newProjectCreate.dart';
 
-class installationCreate extends StatefulWidget {
-  const installationCreate({ Key? key }) : super(key: key);
+class InstallationPage extends StatefulWidget {
+  const InstallationPage({ Key? key }) : super(key: key);
 
   @override
-  _installationCreateState createState() => _installationCreateState();
+  _InstallationPageState createState() => _InstallationPageState();
 }
 
-class _installationCreateState extends State<installationCreate> {
+class _InstallationPageState extends State<InstallationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,7 @@ class _installationCreateState extends State<installationCreate> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => installWindowsPage()));
+                                    builder: (context) => InstallWindowsPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -62,7 +62,7 @@ class _installationCreateState extends State<installationCreate> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => installMacOSPage()));
+                                    builder: (context) => InstallMacOSPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -90,7 +90,7 @@ class _installationCreateState extends State<installationCreate> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => editorSetupPage()));
+                                    builder: (context) => EditorSetupPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -113,7 +113,7 @@ class _installationCreateState extends State<installationCreate> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => newProjectPage()));
+                                    builder: (context) => NewProjectPage()));
                             print('Card tapped.');
                           },
                           child: Column(

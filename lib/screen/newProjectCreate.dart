@@ -1,14 +1,16 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class newProjectPage extends StatefulWidget {
-  const newProjectPage({ Key? key }) : super(key: key);
+class NewProjectPage extends StatefulWidget {
+  const NewProjectPage({ Key? key }) : super(key: key);
 
   @override
-  _newProjectPageState createState() => _newProjectPageState();
+  _NewProjectPageState createState() => _NewProjectPageState();
 }
 
-class _newProjectPageState extends State<newProjectPage> {
+class _NewProjectPageState extends State<NewProjectPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class _newProjectPageState extends State<newProjectPage> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-       
+        
       ),
     );
   }

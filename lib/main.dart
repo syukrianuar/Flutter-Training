@@ -84,7 +84,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => installationCreate()));
+                                    builder: (context) => InstallationPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -106,7 +106,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => installationCreate()));
+                                    builder: (context) => InstallationPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -134,7 +134,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => installationCreate()));
+                                    builder: (context) => InstallationPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -157,7 +157,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => installationCreate()));
+                                    builder: (context) => InstallationPage()));
                             print('Card tapped.');
                           },
                           child: Column(
@@ -181,7 +181,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => installationCreate()));
+                                builder: (context) => InstallationPage()));
                         print('Card tapped.');
                       },
                       child: Column(

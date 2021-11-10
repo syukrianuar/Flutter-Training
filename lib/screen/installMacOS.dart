@@ -1,14 +1,16 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class installMacOSPage extends StatefulWidget {
-  const installMacOSPage({ Key? key }) : super(key: key);
+class InstallMacOSPage extends StatefulWidget {
+  const InstallMacOSPage({ Key? key }) : super(key: key);
 
   @override
-  _installMacOSPageState createState() => _installMacOSPageState();
+  _InstallMacOSPageState createState() => _InstallMacOSPageState();
 }
 
-class _installMacOSPageState extends State<installMacOSPage> {
+class _InstallMacOSPageState extends State<InstallMacOSPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +21,7 @@ class _installMacOSPageState extends State<installMacOSPage> {
         backgroundColor: Colors.black,
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
        
       ),
     );
