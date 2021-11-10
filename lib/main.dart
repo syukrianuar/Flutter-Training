@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_first_flutter/screen/installation.dart';
 
 void main() {
@@ -57,83 +58,199 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Flutter Training Module',
-          textAlign: TextAlign.center,
+          'Flutter Training Module', style: GoogleFonts.staatliches(letterSpacing: 2),
         ),
+        backgroundColor: Colors.black,
+        centerTitle: true,
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        //child: Column(
-        child: GridView.count(
-          crossAxisCount: 2,
-          children: <Widget>[
-            Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>installationCreate()));
-                  print('Card tapped.');
-                },
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/launch_image.png',
-                      width: 150,
-                      height: 150,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.all(18.0),
+              child: Text("Flutter adalah kit pembangunan perisian (software) UI sumber terbuka yang dibuat oleh Google. Ia digunakan untuk membangunkan aplikasi merentas platform untuk Android, iOS, Linux, Mac, Windows, Google Fuchsia, dan banyak lagi hanya daripada satu pangkalan kod (codebase)."),
+            ),
+            Container(
+              // padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => installationCreate()));
+                            print('Card tapped.');
+                          },
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/launch_image.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                              Text('Installation'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => installationCreate()));
+                            print('Card tapped.');
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/launch_image.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                              Text('Basic Widgets'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => installationCreate()));
+                            print('Card tapped.');
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/launch_image.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                              Text('Form and Validation'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => installationCreate()));
+                            print('Card tapped.');
+                          },
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/launch_image.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                              Text('API'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => installationCreate()));
+                            print('Card tapped.');
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/launch_image.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                              Text('Form and Validation'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => installationCreate()));
+                            print('Card tapped.');
+                          },
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/launch_image.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                              Text('API'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Card(
+                    child: InkWell(
+                      splashColor: Colors.blue.withAlpha(30),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => installationCreate()));
+                        print('Card tapped.');
+                      },
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/launch_image.png',
+                            width: 150,
+                            height: 150,
+                          ),
+                          Text('Icon, Splash, APK'),
+                        ],
+                      ),
                     ),
-                    Text('Installation'),
-                  ],
-                ),
-              ),
-            ),
-            Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: Center(
-                  child: Text('Basic Widgets'),
-                ),
-              ),
-            ),
-            Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: Center(
-                  child: Text('Form and Validation'),
-                ),
-              ),
-            ),
-            Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: Center(
-                  child: Text('API'),
-                ),
-              ),
-            ),
-            Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: Center(
-                  child: Text('Icon, Splash, APK'),
-                ),
+                  ),
+                ],
               ),
             ),
           ],
         ),
-        //),
       ),
     );
   }
